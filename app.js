@@ -41,11 +41,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //middleware for handling sessions
-app.use(session({
-    secret: 'secret',
-    saveUinitialized: true,
-    resave: true
-}));
+/*
+    express-session deprecated undefined saveUninitialized option; 
+        provide saveUninitialized option
+*/
+// app.use(session({
+//     secret: 'secret',
+//     saveUinitialized: true,
+//     resave: true
+// }));
 
 //passport middleware
 app.use(passport.initialize());
