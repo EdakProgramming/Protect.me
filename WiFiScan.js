@@ -38,7 +38,6 @@ wifi.init({
 
 wifi.scan((err, networks) => {
     if (err) throw err;
-
     console.log(networks);
 });
 
