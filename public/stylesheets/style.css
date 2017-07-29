@@ -1,0 +1,29 @@
+/*
+	This is a breakpoint basically it that within these parameters do this styling.
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	/*code block*/
+
+}
+
+
+@media only screen and (min-width: 480px) {
+
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+/* This gets the 4th position of every element <p></p> */
+ p:nth-of-type(4n + 0) {
+	background: red;
+ }
+}
+/*
+	Position Static: 
+		Default value. Elements render in order, as they appear in the document flow.
+*/
+
+
