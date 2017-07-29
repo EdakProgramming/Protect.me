@@ -3,22 +3,14 @@
 
 //requiring the operating system module from node
 const os = require('os');
-
-
-const port = process.env.PORT || 3000;
-
-
-
-
-
-
+const wifi = require('node-wifi');
 
 /*
     WiFi Security:
         https://www.npmjs.com/package/node-wifi
 */
 
-const wifi = require('node-wifi');
+
 const iface = os.networkInterfaces().en0;
 
 //initializes the wifi security 
@@ -55,19 +47,16 @@ wifi.scan((err, networks) => {
 //     console.log(currentConnections);
 // });
 
-
 /*
     WiFi Speed Test:
         https://www.npmjs.com/package/wifi-speed
 */
-
 
 const getSpeed = require('wifi-speed');
 getSpeed(function(err, speed) {
     if (err) throw err;
     console.log('Wi-Fi Speed : ', speed);
 });
-
 
 /*
     nMap finding security breaches:
@@ -78,5 +67,5 @@ getSpeed(function(err, speed) {
 
     chai -- https://www.npmjs.com/package/chai
 
-    future feature includes scanning the network for voluneriblities 
+    future feature includes scanning the network for voluneriblities *** Ethical Hackers Welcomed ***
 */
