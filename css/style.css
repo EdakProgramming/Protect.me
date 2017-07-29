@@ -278,9 +278,8 @@ h2{
 #organisations{
     background-color: rgb(247, 247, 247);
 }
-.orga-stru
+.orga-stru, .orga-stru2, .orga-stru3
 {
-    background-color: #FD1C15;
     width: 109px;
     height: auto;
     padding: 10px 10px 25px 10px;
@@ -290,19 +289,31 @@ h2{
     -webkit-border-radius: 0px 80px 99px 99px;
     -o-border-radius: 0px 80px 99px 99px;
 }
-.orga-stru h3 {
+.orga-stru{
+    background-color: #4FBA80;
+
+}
+.orga-stru2{
+    background-color: #FCC200
+}
+
+.orga-stru3{
+    background-color: #FD1C15
+}
+
+.orga-stru h3, .orga-stru2 h3, .orga-stru3 h3 {
     font-size: 36px;
     color: white;
     font-weight: bold;
 }
-.orga-stru p {
+.orga-stru p, .orga-stru2 p, .orga-stru3 p {
     font-size: 14px;
     color: white;
     font-weight: normal;
     line-height: 20px;
     padding-top: 15px;
 }
-.orga-stru i
+.orga-stru i, .orga-stru2 i, .orga-stru3 i
 {
     font-size: 75px;
     margin-top: 35px;
@@ -684,7 +695,7 @@ Responsive media queries
     .ser-text {
     font-size: 20px;
     }
-    .service-box, .feature-info, .orga-stru{
+    .service-box, .feature-info, .orga-stru, .orga-stru2, .orga-stru3{
         margin-bottom: 30px;
     }
     .pricing-head .amount {
@@ -728,18 +739,18 @@ Responsive media queries
     .heading {
     margin-bottom: 20px;
     }
-    .orga-stru i {
+    .orga-stru i, .orga-stru2 i, .orga-stru3 i {
     font-size: 92px;
     }
-    .orga-stru {
+    .orga-stru, .orga-stru2, .orga-stru3 {
     padding: 5px 5px 15px 5px;
     width: 75px;
     margin-bottom: 20px;
     }
-    .orga-stru h3 {
+    .orga-stru h3, .orga-stru2 h3, .orga-stru3 h3 {
     font-size: 28px;
     }
-    .orga-stru p {
+    .orga-stru p, .orga-stru2 p, .orga-stru3 p {
     font-size: 13px;
     }
     h3.det-txt {
