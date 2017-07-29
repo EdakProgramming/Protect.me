@@ -1,29 +1,21 @@
-/*
-	This is a breakpoint basically it that within these parameters do this styling.
-*/
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-	/*code block*/
-
+ul.success li{
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	list-style: none;
 }
 
-
-@media only screen and (min-width: 480px) {
-
-
+ul.error li{
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	list-style: none;
 }
-
-
-@media only screen and (max-width: 767px) {
-
-/* This gets the 4th position of every element <p></p> */
- p:nth-of-type(4n + 0) {
-	background: red;
- }
-}
-/*
-	Position Static: 
-		Default value. Elements render in order, as they appear in the document flow.
-*/
-
-
