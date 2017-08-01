@@ -728,6 +728,7 @@ Responsive media queries
     }
     .header-section p{
         font-size: 14px;
+        background-color: rgb(247, 247, 247);
     }
     .heading {
     margin-bottom: 20px;
