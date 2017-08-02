@@ -295,12 +295,12 @@ h2{
 }
 
 .orga-stru h3, .orga-stru2 h3, .orga-stru3 h3 {
-    font-size: 36px;
+    font-size: 34px;
     color: white;
     font-weight: bold;
 }
 .orga-stru p, .orga-stru2 p, .orga-stru3 p {
-    font-size: 14px;
+    font-size: 12px;
     color: white;
     font-weight: normal;
     line-height: 20px;
