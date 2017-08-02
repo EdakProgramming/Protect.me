@@ -104,7 +104,7 @@ Navigation bar
 Banner
 ************************************/
 .banner{
-	background: url('../img/bg-banner.jpg') no-repeat center top;
+	background: url('../img/bg-banner.png') no-repeat center top;
     background-size: cover;
 	min-height: 580px;
     position: relative;
