@@ -27,8 +27,7 @@ class Home extends Component {
                         </div>
                         <div className="intro-para text-center quote">
                             <p className="big-text">Don't leave yourself vulnerable to cyber attack.</p>
-                            <p className="small-text">Ensure the public network you are accessing are secure.</p>
-                            <p>Sign in to utilize our services</p>
+                            <p className="small-text">Ensure the public network you are accessing is secure.</p>
                         </div>
                         <a href="#feature" className="mouse-hover">
                             <div className="mouse"></div>
@@ -70,38 +69,27 @@ class Home extends Component {
                         <hgroup>
                             <h3 className="det-txt"> Is this network secure?</h3>
                             <h4 className="sm-txt">Here's how to tell:</h4>
-                            <button onClick={this.wifiScanner.bind(this)}>SCAN NETWORKS</button>
-                            {
-                                this.state.networks.map((network, i) => {
-                                    return(
-                                            <div key={i}>
-                                                <label>{network.ssid}</label><br/>
-                                                <label>{network.security}</label>
-                                            </div>
-                                        )
-                                })
-                            }
+                            <button className='btn btn-danger' onClick={this.wifiScanner.bind(this)}>SCAN NETWORKS</button>
                         </hgroup>                          
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="cta-2">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-12">
-                    <h2 className="text-center">Subscribe Now</h2>
-                    <p className="cta-2-txt">Sign up now for our free weekly email where we provide you with tips and tricks for keeping your network secure.</p>
-                    <div className="cta-2-form text-center">
-                        <form action="#" method="post" id="workshop-newsletter-form">
-                            <input name="" placeholder="Enter Your Email Here" type="email"/>
-                            <input className="cta-2-form-submit-btn" value="Subscribe" type="submit"/>
-                        </form>
+        <div className='container'>
+         <div className='row'>
+          <div className='col-lg-12'>
+             {
+                this.state.networks.map((network, i) => {
+                return(
+                    <div id='networks' key={i}>
+                        <label className='ssid'>{network.ssid}</label><br/>
+                        <label className='security'>{network.security}</label>
                     </div>
-                </div>
-            </div>
+                    )
+                })
+            }
+          </div>
+         </div>
         </div>
     </section>
   
@@ -151,7 +139,7 @@ class Home extends Component {
                         <div className="pm-staff-profile-details text-center">
                             <p className="pm-staff-profile-name">Jayce Azua</p>
                             <p className="pm-staff-profile-title">Full-Stack Developer</p>
-                            <p className="pm-staff-profile-bio">Jayce is an experienced Full-Stack Developer. He has created a wide range of projects in PHP and JavaScript. He is currently working as a Freelance Web Developer and CRM architect. </p>
+                            <p className="pm-staff-profile-bio">Jayce is an experienced Full-Stack Developer. He has created a wide range of projects in PHP, Node, and JavaScript. He is currently working as a Freelance Web Developer and CRM architect. </p>
                         </div>
                     </div>
                 </div>

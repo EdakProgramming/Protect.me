@@ -4,7 +4,7 @@
 //requiring the operating system module from node
 const os = require('os');
 const wifi = require('node-wifi');
-
+const getSpeed = require('wifi-speed');
 /*
     WiFi Security:
         https://www.npmjs.com/package/node-wifi
@@ -55,11 +55,13 @@ exports.wifiScanner = (resolve) => {
         https://www.npmjs.com/package/wifi-speed
 */
 
-const getSpeed = require('wifi-speed');
-getSpeed(function(err, speed) {
-    if (err) throw err;
-    console.log('Wi-Fi Speed : ', speed);
-});
+exports.testSpeed = (test) => {
+    getSpeed((err, speed) => {
+        if(err) throw err;
+        test(speed);
+    })
+}
+
 
 /*
     nMap finding security breaches:

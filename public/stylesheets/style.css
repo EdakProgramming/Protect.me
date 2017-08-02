@@ -1,28 +1,28 @@
 body {
-	font-size: 15px;
+    font-size: 15px;
     line-height: 1.52;
     color: #717f86;
     font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 .section-padding{
-	padding: 60px 0px;
+    padding: 60px 0px;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: Open Sans, sans-serif;
@@ -35,6 +35,56 @@ a{
 a:hover, a:focus{
     color: #FD1C15;
 }
+/***********************************
+Error message alerts
+************************************/
+
+ul.success li{
+    padding: 15px;
+    margin-top: 20px
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    list-style: none;
+}
+
+ul.error li{
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    list-style: none;
+}
+
+/***********************************
+Networks scanned /  internet speed
+************************************/
+
+#networks {
+    margin: 8px;
+    border: 1px solid black;
+}
+
+.ssid {
+    color: red;
+}
+
+.security {
+
+}
+
+#speed {
+    margin-left: 5px;
+}
+
+
 /***********************************
 Navigation bar
 ************************************/
@@ -53,13 +103,13 @@ Navigation bar
     font-weight: 700;
 }
 .navbar-nav > li > a{
-	padding: 0px;
-	margin: 10px 5px;
-	padding: 10px 15px;
+    padding: 0px;
+    margin: 10px 5px;
+    padding: 10px 15px;
 }
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover
 {
-	color: #FD1C15;
+    color: #FD1C15;
 }
 
 .navbar-nav .active a{
@@ -69,15 +119,15 @@ Navigation bar
 }
 
 .btn-trial a{
-	background-color: #FD1C15;
-	border-radius: 25px;
-	color: #ffffff !important;
-	border: 1px solid #FD1C15;
+    background-color: #FD1C15;
+    border-radius: 25px;
+    color: #ffffff !important;
+    border: 1px solid #FD1C15;
 }
 .btn-trial a:hover, .btn-trial a:focus{
-	border: 1px solid #FD1C15;
-	background-color: #fff;
-	color: #FD1C15 !important;
+    border: 1px solid #FD1C15;
+    background-color: #fff;
+    color: #FD1C15 !important;
 }
 .navbar-default .navbar-brand {
     font-family: 'Dosis', sans-serif !important;
@@ -89,47 +139,47 @@ Navigation bar
     margin: 20px 0px;
 }
 .navbar-default .navbar-brand span{
-	font-weight: 100 !important;
+    font-weight: 100 !important;
 }
 .navbar {
     margin-bottom: 0px;
 }
 .padding-zero{
-	padding: 0px;
+    padding: 0px;
 }
 .mart20{
-	margin-top: 20px;
+    margin-top: 20px;
 }
 /***********************************
 Banner
 ************************************/
 .banner{
-	background: url('../img/bg-banner.png') no-repeat center top;
+    background: url('../img/bg-banner.png') no-repeat center top;
     background-size: cover;
-	min-height: 580px;
+    min-height: 580px;
     position: relative;
 }
 .bg-color{
-	background-color: RGBA(12, 11, 11, 0.82);
-	min-height: 580px;
+    background-color: RGBA(12, 11, 11, 0.82);
+    min-height: 580px;
 }
 .text-dec{
-	font-size: 24px;
-	padding: 10px 20px;
+    font-size: 24px;
+    padding: 10px 20px;
     margin: 15px 0;
-	text-transform: uppercase;
+    text-transform: uppercase;
     color: #fff;
 }
 .text-border{
-	border: 5px solid #FD1C15;
-	display: inline-block;
-	margin-top: 150px;
+    border: 5px solid #FD1C15;
+    display: inline-block;
+    margin-top: 150px;
 }
 .intro-para{
-	font-family: 'Alegreya Sans', sans-serif;
-	font-size: 45px;
-	color: #fff;
-	margin-top: 30px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 45px;
+    color: #fff;
+    margin-top: 30px;
 }
 .quote .btn{
     background-color: 
@@ -232,16 +282,16 @@ Banner
 Features
 ************************************/
 h2{
-	font-size: 24px;
-	padding-bottom: 15px;
+    font-size: 24px;
+    padding-bottom: 15px;
 }
 .bottom-line{
-	width: 25px;
-	height: 3px;
-	background-color: rgb(99, 122, 145);
+    width: 25px;
+    height: 3px;
+    background-color: rgb(99, 122, 145);
 }
 .fea{
-	margin-top: 25px;
+    margin-top: 25px;
 }
 .fea-img {
   width: 20%;
@@ -269,7 +319,7 @@ h2{
  Organisations
 ************************************/
 #organisations{
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(255, 255, 255);
 }
 .orga-stru, .orga-stru2, .orga-stru3
 {
@@ -327,68 +377,8 @@ p.det-p {
 #pricing{
     background: rgb(247, 247, 247);
 }
-/***********************************
-Cta
-************************************/
-#cta-2{
-    padding: 140px 0;
-}
-.cta-2-txt {
-    font-size: 24px;
-    padding-bottom: 15px;
-    text-align: center;
-    margin: 0 auto;
-    line-height: 34px !important;
-}
-.cta-2-form input[type="email"] {
-    border: 0px solid #CCC;
-    padding: 13px 40px;
-    font-size: 18px;
-    color: #2b5d83;
-    font-weight: 100;
-    min-width: 280px;
-    margin-left: -4px;
-    margin-bottom: 2px;
-    border: 1px solid #FD1C15;
-    background-color: rgb(247, 247, 247);
-    border-radius: 30px 0px 0px 30px;
-}
-.cta-2-form-submit-btn {
-    font-size: 18px;
-    text-transform: capitalize;
-    color: #fff;
-    background-color: #FD1C15;
-    border: 2px solid #fff;
-    padding: 14px 30px;
-    margin-left: -4px;
-    transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    border-width: 1px 1px 1px 0px;
-    border-radius: 0px 30px 30px 0px;
-}
-/***********************************
-Work Shop
-************************************/
-#work-shop {
-    background-color: rgb(247, 247, 247);
-}
-.service-box{
-    background: #fff;
-    padding: 60px 30px 80px;
-    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.1);
-}
-.icon-box i {
-    color: #FD1C15;
-    font-size: 65px;
-}
-.ser-text {
-    font-size: 24px;
-}
-.icon-box, .icon-text {
-    padding: 20px 0px 0px;
-}
+
+
 /***********************************
 Mentor Team
 ************************************/
@@ -418,76 +408,7 @@ Mentor Team
   color: #4b4b4b;
   font-weight: 100;
 }
-/***********************************
-Testimonial
-************************************/
-#testimonial{
-    background-color: #111;
-}
-.bg-white{
-    background-color: #fff !important;
-}
-.text-comment{
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
-}
-.text-par{
-  font-size: 20px;
-  padding-bottom: 15px;
-}
-/***********************************
-Course
-************************************/
-[class*=" imghvr-"] figcaption, [class^="imghvr-"] figcaption {
-    background-color: #FD1C15;
-}
-[class*=" imghvr-"], [class^="imghvr-"] {
-    background-color: #FD1C15;
-    color: #fff;
-}
-/***********************************
-Price Table
-************************************/
-.price-table {
-    box-shadow: 0px 0px 1px 0px RGBA(0, 0, 0, 0.4);
-    position: relative;
-}
-.price-table .pricing-head {
-    background: #fff;
-    padding: 40px;
-    text-align: center;
-}
-.price-table .pricing-head h4 {
-    font-size: 22px;
-    color: #232c3b;
-    margin-top: 0px;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #232c3b;
-    padding-bottom: 20px;
-}
-.pricing-head .amount {
-    font-size: 60px;
-    font-weight: bold;
-}
-.pricing-head .curency {
-    display: inline-block;
-    position: relative;
-    top: -30px;
-    font-size: 20px;
-}
-.price-in {
-    background: #fff;
-    text-align: center;
-}
-.btn-bg {
-    border: 0px;
-    border-radius: 0px;
-    color: #fff !important;
-    padding: 20px 0px;
-    font-weight: bold !important;
-    font-size: 14px;
-    background-color: #FD1C15;
-}
+
 /***********************************
 Contact Us
 ************************************/
@@ -504,7 +425,7 @@ Contact Us
     background: #fafafa;
     border: 1px solid rgba(119, 81, 81, 0.34);
     width: 100%;
-	margin-bottom: 15px;
+    margin-bottom: 15px;
     border-radius: 0;
     
 }
@@ -549,7 +470,7 @@ Contact Us
 }
 
 #sendmessage.show, #errormessage.show, .show {
-	display:block;
+    display:block;
 }
 /***********************************
 Footer
@@ -564,10 +485,10 @@ Footer
 }
 
 .footer h3{
-	font-weight: 300;
-	letter-spacing: 0.05em;
-	margin: 0 0 40px;
-	font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin: 0 0 40px;
+    font-size: 24px;
 }
 .footer .form-control {
     border-radius: 30px;
@@ -608,14 +529,14 @@ Footer
     color: #fff;
 }
 .btn-submit{
-	padding: 14px 12px;
-	border-radius: 50px;
-	text-transform: uppercase;
+    padding: 14px 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
     background-color: #FD1C15;
     color: #fff;
 }
 .btn-submit i{
-	padding-left: 8px;
+    padding-left: 8px;
 }
 
 .btn-sec {
@@ -679,6 +600,7 @@ Footer
 .footer .form-control:focus{
     box-shadow: none;
 }
+
 /***********************************
 ************************************
 Responsive media queries
