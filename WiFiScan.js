@@ -36,10 +36,14 @@ wifi.init({
 //     }
 // }
 
-wifi.scan((err, networks) => {
-    if (err) throw err;
-    console.log(networks);
-});
+exports.wifiScanner = (resolve) => {
+    wifi.scan((err, networks) => {
+        if (err) throw err;
+        resolve(networks);
+    })
+}
+
+
 
 // wifi.getCurrentConnections((err, currentConnections) => {
 //     if (err) throw err;

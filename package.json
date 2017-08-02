@@ -3,9 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "web": "webpack",
+    "web:w": "webpack -w"
   },
   "dependencies": {
+    "axios": "^0.16.2",
+    "babel-core": "^6.3.13",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
     "bcryptjs": "*",
     "body-parser": "*",
     "connect-flash": "*",
@@ -27,7 +35,9 @@
     "passport-local": "*",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.1",
     "serve-favicon": "*",
+    "webpack": "^1.13.1",
     "wifi-speed": "*"
   }
 }
