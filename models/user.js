@@ -1,9 +1,13 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
-mongoose.connect('mongodb://localhost/protect-me', {
-    useMongoClient: true
-});
+var databaseUri = 'mongodb://localhost/protect-me'
+
+if(process.env.MONGODB_URI)  {
+   mongoose.connect(process.env.MONGODB_URI) 
+} else {
+    mongoose.connect(databaseUri);
+}
 
 var db = mongoose.connection;
 
