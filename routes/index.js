@@ -7,9 +7,15 @@ router.get('/', ensureAuthenticated, function(req, res, next) {
     res.render('index', { title: 'Members' });
 });
 
-router.get('/api/wifi', function(req, res, next) {
+router.get('/api/wifi', ensureAuthenticated,function(req, res, next) {
 	wifi.wifiScanner((networks) => {
 		res.json(networks);
+	})
+});
+
+router.get('/api/speed', ensureAuthenticated,function(req, res, next) {
+	wifi.testSpeed((speed) => {
+		res.json(speed);
 	})
 });
 

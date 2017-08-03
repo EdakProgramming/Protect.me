@@ -3,20 +3,47 @@ import axios from 'axios';
 class Home extends Component {
     // @todo: set your inital state
     state = {
-        networks: []
+        networks: [],
+        speed: ''
     };
     wifiScanner(){
         axios.get('/api/wifi').then((response) => {
             console.log(response);
+        for(var i = 0; i < response.data.length; i++) {
+            this.test(response.data[i].ssid, response.data[i].security, response.data[i]);
+        }
             this.setState({
                 networks: response.data
             })
         });
     }
+
+    testSpeed() {
+        axios.get('/api/speed').then((test) => {
+            console.log(test);
+            this.setState({
+                speed: test.data
+            })
+        });
+    }
+
+     test(name, sec, item){
+     switch (true) {
+         case /WPA2/.test(sec):
+             console.log(name + ' security: ' + sec + ' which means it is secured.');
+             item.css = 'secured'
+             break;
+         case /WPA/.test(sec):
+             console.log(name + ' security: ' + sec + ' which means it is at risk.');
+             break;
+         default:
+            console.log(name + ' security: ' + sec + ' which means it is vulnerable.');
+     }
+    }
+
     render() {
         return (
-            <div>
-             
+<div>   
     <div className="banner">
         <div className="bg-color">
             <div className="container">
@@ -29,7 +56,7 @@ class Home extends Component {
                             <p className="big-text">Don't leave yourself vulnerable to cyber attack.</p>
                             <p className="small-text">Ensure the public network you are accessing is secure.</p>
                         </div>
-                        <a href="#feature" className="mouse-hover">
+                        <a href="/" className="mouse-hover">
                             <div className="mouse"></div>
                         </a>
                     </div>
@@ -69,8 +96,13 @@ class Home extends Component {
                         <hgroup>
                             <h3 className="det-txt"> Is this network secure?</h3>
                             <h4 className="sm-txt">Here's how to tell:</h4>
-                            <button className='btn btn-danger' onClick={this.wifiScanner.bind(this)}>SCAN NETWORKS</button>
-                        </hgroup>                          
+                            <button id='networkTable' className='btn btn-danger' onClick={this.wifiScanner.bind(this)}>SCAN NETWORKS</button>
+
+                            <button id='speed' className='btn btn-primary' onClick={this.testSpeed.bind(this)}>TEST INTERNET SPEED</button>
+                        </hgroup> 
+                        <div id='mbsSpeed1'>
+                           Your internet speed is: <span id='mbsSpeed'>{this.state.speed}</span>
+                        </div>                         
                     </div>
                 </div>
             </div>
@@ -78,20 +110,32 @@ class Home extends Component {
         <div className='container'>
          <div className='row'>
           <div className='col-lg-12'>
+          <br/>
+          <table>
+          <thead id='tableHead'>
+                <tr>
+                    <th>Network Name</th>
+                    <th>Network Security</th>
+                </tr>
+          </thead>
+          <tbody id='tbody'>
              {
                 this.state.networks.map((network, i) => {
-                return(
-                    <div id='networks' key={i}>
-                        <label className='ssid'>{network.ssid}</label><br/>
-                        <label className='security'>{network.security}</label>
-                    </div>
+                return( 
+                        <tr key={i} className={network.css}>
+                            <td>{network.ssid}</td>
+                            <td>{network.security}</td>
+                        </tr>
                     )
-                })
+                })          
             }
+            </tbody>
+             </table>
           </div>
          </div>
         </div>
     </section>
+
   
     <section id="organisations" className="section-padding">
         <div className="container">
@@ -179,7 +223,6 @@ class Home extends Component {
                         </div>
                     </div>
                     <div className="col-xs-12">
-                       
                         <button type="submit" id="submit" name="submit" className="form contact-form-button light-form-button oswald light">SEND EMAIL</button>
                     </div>
                 </form>
@@ -187,7 +230,7 @@ class Home extends Component {
         </div>
     </section>
     
-            </div>
+</div>
         );
     }
 }

@@ -1,6 +1,5 @@
 'use strict';
 
-
 //requiring the operating system module from node
 const os = require('os');
 const wifi = require('node-wifi');
@@ -18,24 +17,12 @@ wifi.init({
     iface
 });
 
+/*
+    Check networks around you, even hidden SSIDs.
 
-// we can put this into other modules
-// let test = (name, str) => {
-//     switch (true) {
-//         case /WPA2/.test(str):
-//             secured.push(name + ' security: ' + str);
-//             console.log(secured);
-//             break;
-//         case /WPA/.test(str):
-//             ehhSecured.push(name + ' security: ' + str);
-//             console.log(ehhSecured);
-//             break;
-//         default:
-//             notSecured.push(name + ' security: ' + str);
-//             console.log(notSecured);
-//     }
-// }
+    // separate the networks from secured, at risk, to vulnerable
 
+*/
 exports.wifiScanner = (resolve) => {
     wifi.scan((err, networks) => {
         if (err) throw err;
@@ -43,7 +30,9 @@ exports.wifiScanner = (resolve) => {
     })
 }
 
-
+/*
+    Check vulnerablity of current network.
+*/
 
 // wifi.getCurrentConnections((err, currentConnections) => {
 //     if (err) throw err;
@@ -57,7 +46,7 @@ exports.wifiScanner = (resolve) => {
 
 exports.testSpeed = (test) => {
     getSpeed((err, speed) => {
-        if(err) throw err;
+        if (err) throw err;
         test(speed);
     })
 }
@@ -70,7 +59,7 @@ exports.testSpeed = (test) => {
         Requires to have nmap installed:
             https://nmap.org/download.html
 
-    chai -- https://www.npmjs.com/package/chai
+   
 
     future feature includes scanning the network for voluneriblities *** Ethical Hackers Welcomed ***
 */
